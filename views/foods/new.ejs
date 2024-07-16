@@ -1,0 +1,23 @@
+    <!-- views/foods/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Food</title>
+</head>
+<body>
+  <h1>Create a New Food!</h1>
+  <a href="/foods">Back to Foods</a>
+  <form action="/foods" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name"/>
+
+    <label for="isFavorite">Favorite food?</label>
+    <input type="checkbox" name="isFavorite" id="isFavorite">
+
+    <button type="submit">Add Food</button>
+  </form>
+</body>
+</html>
