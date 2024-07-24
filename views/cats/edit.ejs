@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Cat</title>
+</head>
+
+<body>
+  <%- include('../partials/nav.ejs'); %>
+  <h1>Edit <%= cat.name %></h1>
+  <form action="/cats/<%= cat._id %>?_method=PUT" method="POST">
+    <label for="name">New name: </label>
+    <input type="text" name="name">
+
+    <label for="favoriteToy">New favorite Toy: </label>
+    <input type="text" name="favoriteToy">
+
+    <label for="isHungry">Still Hungry?</label>
+    <input type="checkbox" name="isHungry">
+
+    <button type="submit">Update <%= cat.name %></button>
+  </form>
+
+</body>
+
+</html>

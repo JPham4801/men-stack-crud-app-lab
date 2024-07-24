@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= cat.name %>'s playground</title>
+</head>
+
+<body>
+  <%- include('../partials/nav.ejs'); %>
+  <h1>Hello, world! My name is <%= cat.name %>.</h1>
+  <p>My favorite toy: <%= cat.favoriteToy %></p>
+  <p>I <%= cat.isHungry ? "sure am " : "most certainly am not " %>hungry right now.</p>
+
+  <a style="text-decoration: none;" href="/cats/<%= cat._id %>/edit">Edit <%= cat.name %></a>
+  <form action="/cats/<%= cat._id %>?_method=DELETE" method="POST" >
+    <button type="submit">Delete <%=  %></button>
+  </form>
+</body>
+
+</html>

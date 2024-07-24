@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Index</title>
+</head>
+
+<body>
+  <%- include('../partials/nav.ejs'); %>
+  <h1>The Cat-alog</h1>
+  <ol>
+    <% cats.forEach(cat => {%>
+    <li><a style="text-decoration: none;" href="/cats/<%= cat._id %>"><%= cat.name %></a></li>
+    <% }); %>
+  </ol>
+</body>
+
+</html>
